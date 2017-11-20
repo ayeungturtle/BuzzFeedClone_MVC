@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddAnswer";
+}
+
+<h2>List of all the answers for + THIS ACTUAL QUESTION</h2>
+
+<form action="/Make/ConfirmAnswer" method="post">
+    Answer Text: <input type="text" name="answer"/>
+    <input type="hidden" name="IDHolder" value="@Model"/>
+    <button type="submit">SAVE ANSWER</button>
+</form>
+
+<form action="/Make/AddQuestion">
+    <input type="hidden" name="currentQuizTitleID" value="@Model.currentQuizTitleID" />
+    <button type="submit">BACK TO QUESTIONS</button>
+</form>
